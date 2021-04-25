@@ -1,0 +1,36 @@
+tags:
+  - 添加用户信息
+parameters:
+  - name: body
+    in: body
+    required: true
+    schema:
+      id: 用户添加
+      required:
+          - name
+          - address
+      properties:
+        name:
+          type: string
+          description: 用户名
+          default:
+        address:
+          type: string
+          description: 地址
+          default:
+responses:
+  410:
+    description: 添加用户信息
+  200:
+    description: 添加成功
+    schema:
+      id: user_add
+      properties:
+        code:
+          type: string
+          description: 状态码
+          default:
+        msg:
+          type: string
+          description: 提示语
+          default:

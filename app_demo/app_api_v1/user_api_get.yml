@@ -1,0 +1,28 @@
+tags:
+  - 获取用户详情信息
+parameters:
+  - name: id
+    in: path
+    type: string
+    required: true
+    description: 用户的id
+responses:
+  410:
+    description: 未获取的用户信息
+  200:
+    description: 获取成功
+    schema:
+      id: user_get
+      properties:
+        id:
+          type: integer
+          description: ID
+          default: 0
+        name:
+          type: string
+          description: 用户名
+          default:
+        address:
+          type: string
+          description: 地址
+          default:
